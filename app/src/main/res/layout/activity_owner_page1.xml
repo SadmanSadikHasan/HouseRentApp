@@ -7,34 +7,24 @@
     android:layout_gravity="center"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".AfterLogInActivity">
-
-
-
-    <Button
-        android:layout_marginTop="200dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/OwnerButtonId"
-        android:text="owner"
-        android:textSize="20sp"/>
+    tools:context=".OwnerPage1">
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/renterButtonId"
-        android:layout_marginTop="200dp"
-        android:text="renter"
-        android:textSize="20sp"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="log out"
+        android:layout_marginTop="200sp"
+        android:text="My houses"
         android:textSize="20sp"
-        android:id="@+id/LogOutButtonId"
-        android:layout_marginLeft="140sp"
-        android:layout_marginRight="15sp"
-        android:layout_marginTop="60sp"/>
+        android:id="@+id/MyHousesButtonId"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200sp"
+        android:text="Add new house"
+        android:textSize="20sp"
+        android:id="@+id/AddNewHouseButtonId"
+        />
 
 </LinearLayout>
