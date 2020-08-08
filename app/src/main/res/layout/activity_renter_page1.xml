@@ -7,28 +7,12 @@
     android:layout_gravity="center"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".OwnerPage1">
+    tools:context=".Activity_Renter_Page1">
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="My houses"
-        android:background="@drawable/header"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        android:id="@+id/MyHousesButtonId"
-        />
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:src="@drawable/new_house1"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="101sp"
+        android:layout_marginTop="201sp"
         android:text="Add new house"
         android:background="@drawable/header"
         android:textColor="@android:color/white"
@@ -39,6 +23,9 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:src="@drawable/my_house1"/>
+        android:src="@drawable/house_for_rent"/>
+
+
+
 
 </LinearLayout>
