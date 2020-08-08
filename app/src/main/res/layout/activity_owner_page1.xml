@@ -12,7 +12,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200sp"
+        android:layout_marginTop="201sp"
         android:text="My houses"
         android:textSize="20sp"
         android:id="@+id/MyHousesButtonId"
