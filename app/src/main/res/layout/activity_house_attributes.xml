@@ -27,7 +27,7 @@
     <EditText
 
         android:layout_marginTop="20dp"
-        android:id="@+id/EditText1"
+        android:id="@+id/AreaEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Area :"
@@ -35,35 +35,35 @@
 
     <EditText
         android:layout_marginTop="20dp"
-        android:id="@+id/EditText2"
+        android:id="@+id/DetailEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Detail Address :" />
 
     <EditText
         android:layout_marginTop="20dp"
-        android:id="@+id/EditText3"
+        android:id="@+id/SizeEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Size :" />
 
     <EditText
         android:layout_marginTop="20dp"
-        android:id="@+id/EditText4"
+        android:id="@+id/RoomEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Total Room :" />
 
     <EditText
         android:layout_marginTop="20dp"
-        android:id="@+id/EditText5"
+        android:id="@+id/BathEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Total Bathroom :" />
 
     <EditText
         android:layout_marginTop="20dp"
-        android:id="@+id/EditText6"
+        android:id="@+id/ContactEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Contact Number :" />
@@ -71,11 +71,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="Log Out"
+        android:text="OK"
         android:textSize="20sp"
         android:textColor="@android:color/white"
         android:background="@drawable/header"
-        android:id="@+id/SignUpButtonId1"
+        android:id="@+id/HouseInfoOkButtonId"
         android:layout_gravity="center"/>
 
 
