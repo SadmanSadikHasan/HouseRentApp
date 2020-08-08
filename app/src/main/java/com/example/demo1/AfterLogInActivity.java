@@ -11,6 +11,7 @@ public class AfterLogInActivity extends AppCompatActivity implements View.OnClic
 
     private Button LogOutButton;
     private Button OwnerButton;
+    private Button RenterButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,10 @@ public class AfterLogInActivity extends AppCompatActivity implements View.OnClic
 
         OwnerButton = (Button) findViewById(R.id.OwnerButtonId);
         OwnerButton.setOnClickListener(this);
+
+        RenterButton = (Button) findViewById(R.id.renterButtonId);
+        RenterButton.setOnClickListener(this);
+
     }
 
     @Override
@@ -34,6 +39,11 @@ public class AfterLogInActivity extends AppCompatActivity implements View.OnClic
 
         if(v.getId() == R.id.OwnerButtonId){
             Intent intent = new Intent(AfterLogInActivity.this,OwnerPage1.class);
+            startActivity(intent);
+        }
+
+        if(v.getId() == R.id.renterButtonId){
+            Intent intent = new Intent (AfterLogInActivity.this, Activity_Renter_Page1.class);
             startActivity(intent);
         }
     }

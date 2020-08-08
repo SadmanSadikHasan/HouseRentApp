@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="Login"
+            android:text="Welcome to the App"
             android:id="@+id/login"
             android:textStyle="bold"
             android:textSize="45dp"

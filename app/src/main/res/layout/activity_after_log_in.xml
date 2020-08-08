@@ -12,25 +12,43 @@
 
 
     <Button
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="0dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/OwnerButtonId"
         android:text="owner"
+        android:textColor="@android:color/white"
+        android:background="@drawable/header"
         android:textSize="20sp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:src="@drawable/owner"
+        />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/renterButtonId"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="1dp"
         android:text="renter"
+        android:textColor="@android:color/white"
+        android:background="@drawable/header"
         android:textSize="20sp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:src="@drawable/renter"
+        />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="log out"
+        android:textColor="@android:color/white"
+        android:background="@drawable/header"
         android:textSize="20sp"
         android:id="@+id/LogOutButtonId"
         android:layout_marginLeft="140sp"
