@@ -24,6 +24,16 @@
         android:background="@drawable/header"
         />
 
+
+    <EditText
+
+        android:layout_marginTop="20dp"
+        android:id="@+id/UserName122EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username :"
+        android:textSize="20sp" />
+
     <EditText
 
         android:layout_marginTop="20dp"

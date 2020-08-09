@@ -2,7 +2,15 @@ package com.example.demo1;
 
 public class HouseInfoDetails {
 
-    private String area,detail,size,room,bath,contact;
+    private String area,detail,size,room,bath,contact,username;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
     public String getArea() {
         return area;
