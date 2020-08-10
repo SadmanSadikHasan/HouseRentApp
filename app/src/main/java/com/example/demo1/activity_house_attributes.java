@@ -2,6 +2,7 @@ package com.example.demo1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -69,6 +70,8 @@ public class activity_house_attributes extends AppCompatActivity implements View
         houseInfoDetails.setContact(contact);
 
 
+
+
         long rowId = daa.insertData(houseInfoDetails);
 
 
@@ -81,6 +84,8 @@ public class activity_house_attributes extends AppCompatActivity implements View
                 Toast.makeText(getApplicationContext(),"Row"+rowId+"is successfully inserted",Toast.LENGTH_LONG).show();
 
             }
+            Intent intent = new Intent(activity_house_attributes.this, AfterLogInActivity.class);
+            startActivity(intent);
         }
     }
 }

@@ -2,6 +2,7 @@ package com.example.demo1;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
@@ -25,6 +26,8 @@ public class DatabaseAddressAttribute extends SQLiteOpenHelper {
 
     public static final String CREATE_TABLE = "CREATE TABLE "+TABLE_NAME+"("+USERNAME+" TEXT NOT NULL, "+AREA+" VARCHAR(255) NOT NULL, "+DETAIL_ADD+" VARCHAR(1000) NOT NULL, "+SIZE+" TEXT NOT NULL, "+ROOM+" TEXT NOT NULL,"+BATH+" TEXT NOT NULL, "+CONT_NO+" TEXT NOT NULL);";
     public static final String DROP_TABLE = " DROP TABLE IF EXISTS " + TABLE_NAME;
+    //public static final String Select_All = " SELECT * FROM " + TABLE_NAME;
+
 
     private Context context;
     public DatabaseAddressAttribute(@Nullable Context context) {
@@ -72,5 +75,13 @@ public class DatabaseAddressAttribute extends SQLiteOpenHelper {
         long rowId = db.insert(TABLE_NAME,null, contentValues);
         return rowId;
 
+    }
+
+    public Cursor myhouse(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        //Cursor cursor = db.rawQuery(Select_All,null);
+        Cursor cursor = db.rawQuery("SELECT * FROM "+TABLE_NAME,null);
+
+        return cursor;
     }
 }
