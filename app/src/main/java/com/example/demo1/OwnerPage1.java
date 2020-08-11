@@ -16,6 +16,7 @@ public class OwnerPage1 extends AppCompatActivity implements View.OnClickListene
     private Button AddNewHouse;
     private Button MyHouse;
     DatabaseAddressAttribute daa;
+    DatabaseHelper databaseHelper;
     HouseInfoDetails houseInfoDetails;
     String username;
 
@@ -36,11 +37,19 @@ public class OwnerPage1 extends AppCompatActivity implements View.OnClickListene
         SQLiteDatabase sqLiteDatabase = daa.getWritableDatabase();
         houseInfoDetails = new HouseInfoDetails();
 
+        databaseHelper = new DatabaseHelper(this);
+        SQLiteDatabase sqLiteDatabase1 = databaseHelper.getWritableDatabase();
+
         AddNewHouse = (Button) findViewById(R.id.AddNewHouseButtonId);
         AddNewHouse.setOnClickListener(this);
 
         MyHouse = (Button) findViewById(R.id.MyHousesButtonId);
         MyHouse.setOnClickListener(this);
+
+        Bundle bundle = getIntent().getExtras();
+        if(bundle != null){
+            username = bundle.getString("username");
+        }
     }
 
     @Override
@@ -60,6 +69,8 @@ public class OwnerPage1 extends AppCompatActivity implements View.OnClickListene
         }
         if(v.getId() == R.id.MyHousesButtonId){
             Cursor cursor = daa.myhouse();
+            //Cursor cursor1 = databaseHelper.myhouse();
+            //String usernameDB1 = databaseHelper.myhouse();
 
             if(cursor.getCount() ==0){
                 //there is no data
@@ -68,16 +79,21 @@ public class OwnerPage1 extends AppCompatActivity implements View.OnClickListene
                 return;
             }
             StringBuffer stringBuffer = new StringBuffer();
-            while (cursor.moveToNext()){
-                stringBuffer.append("USERNAME : "+cursor.getString(0) +"\n");
-                stringBuffer.append("AREA : "+cursor.getString(1) +"\n");
-                stringBuffer.append("DETAIL_ADD : "+cursor.getString(2) +"\n");
-                stringBuffer.append("SIZE : "+cursor.getString(3) +"\n");
-                stringBuffer.append("ROOM : "+cursor.getString(4) +"\n");
-                stringBuffer.append("BATH : "+cursor.getString(5) +"\n");
-                stringBuffer.append("CONT_NO : "+cursor.getString(6) +"\n\n\n");
+            while(cursor.moveToNext() /*&& cursor1.moveToNext()*/) {
+                //String usernameDB1 = cursor1.getString(3);
+                String usernameDB2 = cursor.getString(0);
+
+                if (usernameDB2.equals(username)) {
+                    stringBuffer.append("USERNAME : " + cursor.getString(0) + "\n");
+                    stringBuffer.append("AREA : " + cursor.getString(1) + "\n");
+                    stringBuffer.append("DETAIL_ADD : " + cursor.getString(2) + "\n");
+                    stringBuffer.append("SIZE : " + cursor.getString(3) + "\n");
+                    stringBuffer.append("ROOM : " + cursor.getString(4) + "\n");
+                    stringBuffer.append("BATH : " + cursor.getString(5) + "\n");
+                    stringBuffer.append("CONT_NO : " + cursor.getString(6) + "\n\n\n");
+                }
+                showData("ResultSet", stringBuffer.toString());
             }
-            showData("ResultSet", stringBuffer.toString());
 
         }
 

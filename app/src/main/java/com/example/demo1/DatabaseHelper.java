@@ -20,6 +20,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String PASSWORD = "Password";
     public static final int VERSION_NUMBER = 2;
     private Context context;
+    String username;
 
 
     public static final String CREATE_TABLE = "CREATE TABLE "+TABLE_NAME+"("+ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "+NAME+" VARCHAR(255) NOT NULL, "+EMAIL+" TEXT NOT NULL, "+USERNAME+" TEXT NOT NULL, "+PASSWORD+" TEXT NOT NULL);";
@@ -80,7 +81,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else{
 
             while (cursor.moveToNext()){
-                String username = cursor.getString(3);
+                 username = cursor.getString(3);
                 String password = cursor.getString(4);
 
                 if(username.equals(uname) && password.equals(pass)){
@@ -92,4 +93,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return result;
 
     }
+
+    /*public String myhouse(){
+        //SQLiteDatabase db = this.getWritableDatabase();
+        //Cursor cursor = db.rawQuery(Select_All,null);
+        //Cursor cursor = db.rawQuery("SELECT * FROM "+TABLE_NAME,null);
+        System.out.println(username);
+        return username;
+    }*/
 }

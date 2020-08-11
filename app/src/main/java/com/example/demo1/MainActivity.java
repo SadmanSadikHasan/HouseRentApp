@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if(result == true){
 
                 Intent intent = new Intent(MainActivity.this,AfterLogInActivity.class);
+                intent.putExtra("username",username);
                 startActivity(intent);
 
             }else{
