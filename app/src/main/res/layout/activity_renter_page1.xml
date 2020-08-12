@@ -13,11 +13,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="201sp"
-        android:text="Add new house"
+        android:text="Search for house"
         android:background="@drawable/header"
         android:textColor="@android:color/white"
         android:textSize="20sp"
-        android:id="@+id/AddNewHouseButtonId"
+        android:id="@+id/SearchforHouseid"
         />
 
     <ImageView
