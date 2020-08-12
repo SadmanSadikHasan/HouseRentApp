@@ -59,4 +59,6 @@ public class HouseInfoDetails {
     public void setContact(String contact) {
         this.contact = contact;
     }
+
+
 }

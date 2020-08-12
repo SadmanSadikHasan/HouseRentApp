@@ -20,8 +20,6 @@ public class DatabaseAddressAttribute extends SQLiteOpenHelper {
     private static final String ROOM = "Room";
     private static final String BATH = "Bath";
     private static final String CONT_NO = "Cont_No";
-    private static final String Search_by_Area = "Search_by_Area";
-
     public static final int VERSION_NUMBER = 5;
 
     UserDetails userDetails;
@@ -85,14 +83,5 @@ public class DatabaseAddressAttribute extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery("SELECT * FROM "+TABLE_NAME,null);
 
         return cursor;
-    }
-
-    public Cursor showAllData(){
-
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM "+TABLE_NAME,null);
-        return cursor;
-
-
     }
 }
