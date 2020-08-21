@@ -34,6 +34,7 @@ public class Activity_Renter_Find_House extends AppCompatActivity implements Vie
         String search = SearchEditText.getText().toString();
         if(v.getId() == R.id.okbuttonid){
             Intent intent = new Intent(Activity_Renter_Find_House.this,renter_data_activity.class);
+            intent.putExtra("area",search);
             startActivity(intent);
 
         }
