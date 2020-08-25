@@ -75,6 +75,7 @@ public class OwnerPage1 extends AppCompatActivity implements View.OnClickListene
             //Cursor cursor1 = databaseHelper.myhouse();
             //String usernameDB1 = databaseHelper.myhouse();
 
+
             //if(cursor.getCount() ==0){
             //there is no data
             //showData("Error", "No data Found");
