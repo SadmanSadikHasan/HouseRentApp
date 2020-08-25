@@ -19,6 +19,7 @@ public class OwnerPage1 extends AppCompatActivity implements View.OnClickListene
     DatabaseHelper databaseHelper;
     HouseInfoDetails houseInfoDetails;
     String username;
+    //String abcd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
