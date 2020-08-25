@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class OwnerPage1 extends AppCompatActivity implements View.OnClickListener {
-    private EditText areaET,detailET,sizeET,roomET,bathET,contactET,userET;
+    private EditText areaET, detailET, sizeET, roomET, bathET, contactET, userET;
     private Button AddNewHouse;
     private Button MyHouse;
     DatabaseAddressAttribute daa;
@@ -47,7 +47,7 @@ public class OwnerPage1 extends AppCompatActivity implements View.OnClickListene
         MyHouse.setOnClickListener(this);
 
         Bundle bundle = getIntent().getExtras();
-        if(bundle != null){
+        if (bundle != null) {
             username = bundle.getString("username");
         }
     }
@@ -63,25 +63,27 @@ public class OwnerPage1 extends AppCompatActivity implements View.OnClickListene
         String bath = bathET.getText().toString();
         String contact = contactET.getText().toString();*/
 
-            if(v.getId() == R.id.AddNewHouseButtonId){
-            Intent intent = new Intent(OwnerPage1.this , activity_house_attributes.class);
+        if (v.getId() == R.id.AddNewHouseButtonId) {
+            Intent intent = new Intent(OwnerPage1.this, activity_house_attributes.class);
             startActivity(intent);
         }
-        if(v.getId() == R.id.MyHousesButtonId){
-            Cursor cursor = daa.myhouse();
+        if (v.getId() == R.id.MyHousesButtonId) {
+            Intent intent = new Intent(OwnerPage1.this,myhouse_show.class);
+            startActivity(intent);
+            //Cursor cursor = daa.myhouse();
             //Cursor cursor1 = databaseHelper.myhouse();
             //String usernameDB1 = databaseHelper.myhouse();
 
-            if(cursor.getCount() ==0){
-                //there is no data
-                showData("Error", "No data Found");
+            //if(cursor.getCount() ==0){
+            //there is no data
+            //showData("Error", "No data Found");
 
-                return;
-            }
-            StringBuffer stringBuffer = new StringBuffer();
-            while(cursor.moveToNext() /*&& cursor1.moveToNext()*/) {
-                //String usernameDB1 = cursor1.getString(3);
-                String usernameDB2 = cursor.getString(0);
+            //return;
+            //}
+            /*StringBuffer stringBuffer = new StringBuffer();
+            while(cursor.moveToNext() /*&& cursor1.moveToNext()) {*/
+            //String usernameDB1 = cursor1.getString(3);
+                /*String usernameDB2 = cursor.getString(0);
 
                 if (usernameDB2.equals(username)) {
                     stringBuffer.append("USERNAME : " + cursor.getString(0) + "\n");
@@ -93,13 +95,14 @@ public class OwnerPage1 extends AppCompatActivity implements View.OnClickListene
                     stringBuffer.append("CONT_NO : " + cursor.getString(6) + "\n\n\n");
                 }
                 showData("ResultSet", stringBuffer.toString());
-            }
+            }*/
 
         }
 
     }
+}
 
-    public void showData(String title, String message){
+    /*public void showData(String title, String message){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(title);
         builder.setMessage(message);
@@ -107,4 +110,4 @@ public class OwnerPage1 extends AppCompatActivity implements View.OnClickListene
         builder.show();
 
     }
-}
+}*/
