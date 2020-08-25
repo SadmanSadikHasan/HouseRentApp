@@ -20,11 +20,12 @@ public class DatabaseAddressAttribute extends SQLiteOpenHelper {
     private static final String ROOM = "Room";
     private static final String BATH = "Bath";
     private static final String CONT_NO = "Cont_No";
-    public static final int VERSION_NUMBER = 5;
+    private static final String RENT_AMOUNT = "Rent";
+    public static final int VERSION_NUMBER = 6;
 
     UserDetails userDetails;
 
-    public static final String CREATE_TABLE = "CREATE TABLE "+TABLE_NAME+"("+USERNAME+" TEXT NOT NULL, "+AREA+" VARCHAR(255) NOT NULL, "+DETAIL_ADD+" VARCHAR(1000) NOT NULL, "+SIZE+" TEXT NOT NULL, "+ROOM+" TEXT NOT NULL,"+BATH+" TEXT NOT NULL, "+CONT_NO+" TEXT NOT NULL);";
+    public static final String CREATE_TABLE = "CREATE TABLE "+TABLE_NAME+"("+USERNAME+" TEXT NOT NULL, "+AREA+" VARCHAR(255) NOT NULL, "+DETAIL_ADD+" VARCHAR(1000) NOT NULL, "+SIZE+" TEXT NOT NULL, "+ROOM+" TEXT NOT NULL,"+BATH+" TEXT NOT NULL, "+CONT_NO+" TEXT NOT NULL, "+RENT_AMOUNT+" TEXT NOT NULL);";
     public static final String DROP_TABLE = " DROP TABLE IF EXISTS " + TABLE_NAME;
     //public static final String Select_All = " SELECT * FROM " + TABLE_NAME;
 
@@ -71,6 +72,7 @@ public class DatabaseAddressAttribute extends SQLiteOpenHelper {
         contentValues.put(ROOM,houseInfoDetails.getRoom());
         contentValues.put(BATH,houseInfoDetails.getBath());
         contentValues.put(CONT_NO,houseInfoDetails.getContact());
+        contentValues.put(RENT_AMOUNT,houseInfoDetails.getRent());
 
         long rowId = db.insert(TABLE_NAME,null, contentValues);
         return rowId;

@@ -49,7 +49,8 @@ public class renter_data_activity extends AppCompatActivity {
                     listData.add("SIZE : " + cursor.getString(3));
                     listData.add("ROOM : " + cursor.getString(4));
                     listData.add("BATH : " + cursor.getString(5));
-                    listData.add("CONT_NO : " + cursor.getString(6)+ "\n\n");
+                    listData.add("CONT_NO : " + cursor.getString(6)+ "\n");
+                    listData.add("Rent Amount : " + cursor.getString(7)+ "\n\n");
                 }
 
             }

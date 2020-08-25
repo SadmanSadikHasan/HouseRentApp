@@ -2,7 +2,7 @@ package com.example.demo1;
 
 public class HouseInfoDetails {
 
-    private String area,detail,size,room,bath,contact,username;
+    private String area,detail,size,room,bath,contact,username,rent;
 
     public String getUsername() {
         return username;
@@ -10,6 +10,14 @@ public class HouseInfoDetails {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getRent() {
+        return rent;
+    }
+
+    public void setRent(String rent) {
+        this.rent = rent;
     }
 
     public String getArea() {

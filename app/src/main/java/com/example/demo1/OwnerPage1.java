@@ -93,7 +93,8 @@ public class OwnerPage1 extends AppCompatActivity implements View.OnClickListene
                     stringBuffer.append("SIZE : " + cursor.getString(3) + "\n");
                     stringBuffer.append("ROOM : " + cursor.getString(4) + "\n");
                     stringBuffer.append("BATH : " + cursor.getString(5) + "\n");
-                    stringBuffer.append("CONT_NO : " + cursor.getString(6) + "\n\n\n");
+                    stringBuffer.append("CONT_NO : " + cursor.getString(6) + "\n");
+                    stringBuffer.append("Rent Amount : " + cursor.getString(7) + "\n\n");
                 }
                 showData("ResultSet", stringBuffer.toString());
             }*/

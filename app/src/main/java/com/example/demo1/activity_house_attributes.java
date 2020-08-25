@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class activity_house_attributes extends AppCompatActivity implements View.OnClickListener {
 
-    private EditText areaET,detailET,sizeET,roomET,bathET,contactET,userET;
+    private EditText areaET,detailET,sizeET,roomET,bathET,contactET,userET,rentAmountET;
     private Button okButton;
     DatabaseAddressAttribute daa;
     HouseInfoDetails houseInfoDetails;
@@ -34,6 +34,7 @@ public class activity_house_attributes extends AppCompatActivity implements View
         roomET = (EditText)findViewById(R.id.RoomEditText);
         bathET = (EditText)findViewById(R.id.BathEditText);
         contactET = (EditText)findViewById(R.id.ContactEditText);
+        rentAmountET = (EditText)findViewById(R.id.RentAmountEditText);
 
         okButton = (Button)findViewById(R.id.HouseInfoOkButtonId);
         okButton.setOnClickListener(this);
@@ -58,16 +59,18 @@ public class activity_house_attributes extends AppCompatActivity implements View
         String room = roomET.getText().toString();
         String bath = bathET.getText().toString();
         String contact = contactET.getText().toString();
+        String rent = rentAmountET.getText().toString();
 
 
         if(v.getId() == R.id.HouseInfoOkButtonId){
             houseInfoDetails.setUsername(username);
             houseInfoDetails.setArea(area);
-        houseInfoDetails.setDetail(detail);
-        houseInfoDetails.setSize(size);
-        houseInfoDetails.setRoom(room);
-        houseInfoDetails.setBath(bath);
-        houseInfoDetails.setContact(contact);
+            houseInfoDetails.setDetail(detail);
+            houseInfoDetails.setSize(size);
+            houseInfoDetails.setRoom(room);
+            houseInfoDetails.setBath(bath);
+            houseInfoDetails.setContact(contact);
+            houseInfoDetails.setRent(rent);
 
 
 
