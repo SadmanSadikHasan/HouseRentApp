@@ -66,10 +66,12 @@ public class OwnerPage1 extends AppCompatActivity implements View.OnClickListene
 
         if (v.getId() == R.id.AddNewHouseButtonId) {
             Intent intent = new Intent(OwnerPage1.this, activity_house_attributes.class);
+
             startActivity(intent);
         }
         if (v.getId() == R.id.MyHousesButtonId) {
             Intent intent = new Intent(OwnerPage1.this,myhouse_show.class);
+            intent.putExtra("username",username);
             startActivity(intent);
             //Cursor cursor = daa.myhouse();
             //Cursor cursor1 = databaseHelper.myhouse();
